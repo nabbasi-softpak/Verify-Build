@@ -20,24 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install PostgreSQL Client
-      run: |        
-        #echo sudo bash -c "echo deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main >> /etc/apt/sources.list.d/pgdg.list"
-        #echo wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-        #echo sudo apt-get update
-        #echo sudo apt-get -yqq install libpq-dev postgresql-client-11
-        #sudo apt-get -yqq install postgresql-client
-        echo $(java --version)
-        echo $(java --version)
-    - name: Remove old Open JDK and install Open JDK 11
-      run: |
-        sudo apt update -y && sudo apt upgrade -y
-        sudo apt-get purge AdoptOpenJDK* -yqq
-        sudo apt-get purge openjdk* -yqq
-        sudo dpkg --list | grep zulu
-        sudo dpkg --remove zulu-7-azure-jdk
-        sudo apt-get install openjdk-11-jdk -y
-        echo "Java version: $(java -version)"
     - name: Verifying deployed build
       run: |
         ls -la
