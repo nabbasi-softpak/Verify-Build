@@ -21,8 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install PostgreSQL Client
-      run: |
-        sudo apt-get update
+      run: |        
         #echo sudo bash -c "echo deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main >> /etc/apt/sources.list.d/pgdg.list"
         #echo wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
         #echo sudo apt-get update
