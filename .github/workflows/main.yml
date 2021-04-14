@@ -30,11 +30,7 @@ jobs:
         sudo apt-get -yqq install postgresql-client
     - name: Remove old Open JDK and install Open JDK 11
       run: |
-        sudo apt-get purge AdoptOpenJDK* -yqq
-        sudo apt-get purge openjdk* -yqq
-        sudo dpkg --list | grep zulu
-        sudo dpkg --remove zulu-7-azure-jdk
-        sudo apt-get install openjdk-11-jre-headless -y
+        sudo apt update -y && sudo apt install openjdk-11-jdk
         echo "Java version: $(java -version)"
     - name: Verifying deployed build
       run: |
