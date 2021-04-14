@@ -27,7 +27,8 @@ jobs:
         #echo wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
         #echo sudo apt-get update
         #echo sudo apt-get -yqq install libpq-dev postgresql-client-11
-        sudo apt-get -yqq install postgresql-client
+        #sudo apt-get -yqq install postgresql-client
+        echo $(java)
     - name: Remove old Open JDK and install Open JDK 11
       run: |
         sudo apt update -y && sudo apt upgrade -y
