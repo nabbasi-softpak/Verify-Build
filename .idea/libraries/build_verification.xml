@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="build-verification">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/softpak/verify_build/build-verification.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
